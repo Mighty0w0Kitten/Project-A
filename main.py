@@ -1,10 +1,20 @@
-import numpy as np # type: ignore
+# Импортируем модули из папки modules
+from modules.data_loader import load_data
+from modules.nlp_utils import preprocess_text
+from modules.model import train_model
 
-# Создание массива
-arr = np.array([1, 2, 3, 4, 5])
+# Основная логика программы
+def main():
+    # Загружаем данные
+    data = load_data('data.txt')  # Функция для загрузки данных
 
-# Операции с массивами
-arr_sum = np.sum(arr)  # Сумма элементов
-arr_mean = np.mean(arr)  # Среднее значение
+    # Обрабатываем текст
+    processed_data = preprocess_text(data)  # Обрабатываем текст
 
-print(f"Сумма: {arr_sum}, Среднее: {arr_mean}")
+    # Обучаем модель
+    model = train_model(processed_data)  # Обучаем модель
+
+    print("Модель успешно обучена!")
+
+if __name__ == "__main__":
+    main()
