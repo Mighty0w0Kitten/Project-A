@@ -16,15 +16,15 @@ def main():
     print(response)
 
     # Загружаем данные
-    data = load_data('data.txt')  # Функция для загрузки данных
+    # data = load_data('data.txt')  # Функция для загрузки данных
 
     # Обрабатываем текст
-    processed_data = preprocess_text(data)  # Обрабатываем текст
+    #processed_data = preprocess_text(data)  # Обрабатываем текст
 
     # Обучаем модель
-    model = train_model(processed_data)  # Обучаем модель
+    # model = train_model(processed_data)  # Обучаем модель
 
-    print("Модель успешно обучена!")
+    #print("Модель успешно обучена!")
 
 if __name__ == "__main__":
     main()
