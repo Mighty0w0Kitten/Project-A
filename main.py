@@ -2,9 +2,19 @@
 from modules.data_loader import load_data
 from modules.nlp_utils import preprocess_text
 from modules.model import train_model
+from modules.query_parser import parse_query
 
 # Основная логика программы
 def main():
+    # Пример запроса от пользователя
+    user_query = input("Введите запрос: ")
+
+# Обрабатываем запрос
+    response = parse_query(user_query)
+
+    # Выводим ответ
+    print(response)
+
     # Загружаем данные
     data = load_data('data.txt')  # Функция для загрузки данных
 
